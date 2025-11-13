@@ -17,7 +17,7 @@ function enviarDados() {
         return;
     }
 
-    fetch('http://localhost:3000/pessoas', {
+    fetch('pessoas', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -44,3 +44,4 @@ function enviarDados() {
         alert('Erro ao cadastrar usuário.');
     });
 }
+
