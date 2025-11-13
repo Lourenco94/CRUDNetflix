@@ -1,6 +1,6 @@
 // Carrega todos os usuários e popula a tabela
 function carregarTodos() {
-    fetch('http://localhost:3000/pessoas')
+    fetch('pessoas')
     .then(res => res.json())
     .then(data => {
         montarTabela(data);
@@ -72,4 +72,5 @@ function irDeletar(cpf) {
 
 // Ao carregar a página, carrega todos
 document.addEventListener('DOMContentLoaded', carregarTodos);
+
 
