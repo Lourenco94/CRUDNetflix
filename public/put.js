@@ -54,7 +54,7 @@ function salvarEdicao() {
     var estado = document.getElementById('estado').value;
     var telefone = document.getElementById('telefone').value;
 
-    fetch('pessoas' + usuarioIdAtual, {
+    fetch(`pessoas/${id}` + usuarioIdAtual, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -90,6 +90,7 @@ function salvarEdicao() {
     buscarParaEditar();
   }
 })();
+
 
 
 
