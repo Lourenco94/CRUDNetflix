@@ -8,7 +8,7 @@ function buscarParaEditar() {
         return;
     }
 
-    fetch(`pessoas/${id}` + encodeURIComponent(cpfBuscar))
+    fetch('pessoas' + encodeURIComponent(cpfBuscar))
     .then(res => res.json())
     .then(data => {
         if (data.length === 0) {
@@ -90,6 +90,7 @@ function salvarEdicao() {
     buscarParaEditar();
   }
 })();
+
 
 
 
