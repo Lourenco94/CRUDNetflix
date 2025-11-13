@@ -20,7 +20,7 @@ function deletarDados() {
         // Confirmação básica
         if (!confirm('Confirma exclusão do usuário: ' + usuario.nome + ' ' + (usuario.sobrenome||'') + ' ?')) return;
 
-        fetch('pessoas' + id, {
+        fetch('pessoas', {
             method: 'DELETE'
         })
         .then(res => {
@@ -50,6 +50,7 @@ function deletarDados() {
     document.getElementById('identificadorCPF').value = cpfParam;
   }
 })();
+
 
 
 
