@@ -24,7 +24,7 @@
         return;
       }
   
-      const baseUrl = 'http://localhost:3000/pessoas';
+      const baseUrl = 'pessoas';
       // primeiro tentamos busca exata via query param (json-server suporta ?email=)
       const exactUrl = `${baseUrl}?email=${encodeURIComponent(email)}`;
   
@@ -90,4 +90,5 @@
   
     btn.addEventListener('click', logar);
   })();
+
   
