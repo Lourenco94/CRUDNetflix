@@ -39,7 +39,7 @@ app.get('/', function(req, res) {
 
 //Inicia o servidor na porta definida e exibe uma mensagem no console
 server.listen(porta, () => {
-    console.log(`JSON SERVER está rodando em 'pessoas'`);
+    console.log(`JSON SERVER está rodando em http://localhost:${porta}`);
 })
 
 
