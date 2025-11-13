@@ -49,7 +49,7 @@ function buscarPorCPF() {
         return;
     }
 
-    fetch('http://localhost:3000/pessoas?cpf=' + encodeURIComponent(cpf))
+    fetch('pessoas' + encodeURIComponent(cpf))
     .then(res => res.json())
     .then(data => {
         montarTabela(data);
@@ -72,3 +72,4 @@ function irDeletar(cpf) {
 
 // Ao carregar a página, carrega todos
 document.addEventListener('DOMContentLoaded', carregarTodos);
+
