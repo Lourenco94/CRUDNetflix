@@ -7,7 +7,7 @@ function deletarDados() {
     }
 
     // Busca por CPF para obter o id
-    fetch('http://localhost:3000/pessoas?cpf=' + encodeURIComponent(cpf))
+    fetch('pessoas' + encodeURIComponent(cpf))
     .then(res => res.json())
     .then(data => {
         if (data.length === 0) {
@@ -50,4 +50,5 @@ function deletarDados() {
     document.getElementById('identificadorCPF').value = cpfParam;
   }
 })();
+
 
