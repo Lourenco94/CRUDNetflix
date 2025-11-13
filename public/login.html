@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="login-card">
+    <h1>Logue Para Ver as Contas</h1>
+
+    <label for="emailLogin">Email:</label>
+    <input type="text" id="emailLogin" autocomplete="username">
+
+    <label for="senhaLogin">Senha:</label>
+    <input type="password" id="senhaLogin" autocomplete="current-password">
+
+    <input type="button" id="btnEntrar" value="Entrar">
+
+    <p id="msg" style="color:#ffcccb; margin-top:12px; display:none;"></p>
+
+    <p style="margin-top:12px">Não tem conta? <a href="post.html">Cadastre-se</a></p>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

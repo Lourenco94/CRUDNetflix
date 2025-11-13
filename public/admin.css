@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+:root{
+  --bg-1: #0b0f14;
+  --bg-2: #0f1720;
+  --accent: #e50914;
+  --muted: #98a0aa;
+  --glass: rgba(255,255,255,0.04);
+  --card: rgba(255,255,255,0.03);
+  --radius: 14px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(229,9,20,0.06), transparent 10%),
+              linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px;
+}
+
+/* container centralizado e mais estreito para foco tipo "player" */
+.container{
+  width:100%;
+  max-width:980px;
+  margin:0 auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: var(--radius);
+  padding:34px;
+  box-shadow: 0 18px 60px rgba(2,6,12,0.7), inset 0 1px 0 rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.03);
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  align-items:center; /* centraliza conteúdo interno */
+  text-align:center;
+}
+
+/* topo */
+.container h1{
+  margin:0;
+  font-weight:800;
+  letter-spacing: -0.02em;
+  font-size:30px;
+  display:block;
+}
+
+/* subtitulo / legenda */
+.container p.lead{
+  color:var(--muted);
+  margin:6px 0 10px 0;
+  max-width:820px;
+}
+
+/* botoes alinhados ao centro tipo controles */
+.botoes{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:6px;
+}
+
+.botoes button{
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.04);
+  padding:12px 18px;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s;
+  box-shadow: 0 6px 18px rgba(2,6,12,0.6);
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+}
+
+.botoes .primary{
+  background: linear-gradient(180deg, var(--accent), #bf0811);
+  border: none;
+  color:white;
+  box-shadow: 0 8px 30px rgba(229,9,20,0.18);
+}
+
+.botoes button:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(2,6,12,0.6);
+}
+
+/* footer de metadados */
+.meta{
+  color:var(--muted);
+  font-size:13px;
+  margin-top:6px;
+}
+
+/* layout responsivo */
+@media (max-width:640px){
+  body{padding:20px}
+  .container{padding:20px}
+  .container h1{font-size:22px}
+  .container p.lead{font-size:14px}
+}

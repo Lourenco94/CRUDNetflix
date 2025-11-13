@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editar Usuário</title>
+  <link rel="stylesheet" href="put.css">
+</head>
+<body>
+  <div class="form-card">
+    <h1>Editar Usuário</h1>
+
+    <label>CPF (para buscar)</label>
+    <input type="text" id="identificadorCPF_busca">
+    <input type="button" onclick="buscarParaEditar()" value="Carregar dados">
+
+    <hr style="margin:12px 0; opacity:.06">
+
+    <label>Nome</label>
+    <input type="text" id="nome">
+
+    <label>Sobrenome</label>
+    <input type="text" id="sobrenome">
+
+    <label>CPF</label>
+    <input type="text" id="identificadorCPF">
+
+    <label>Email</label>
+    <input type="email" id="email">
+
+    <label>Senha</label>
+    <input type="password" id="senha">
+
+    <label>Rua</label>
+    <input type="text" id="rua">
+
+    <label>CEP</label>
+    <input type="text" id="cep">
+
+    <label>Cidade</label>
+    <input type="text" id="cidade">
+
+    <label>Estado</label>
+    <input type="text" id="estado">
+
+    <label>Telefone</label>
+    <input type="text" id="telefone">
+
+    <div class="actions">
+      <button class="save" onclick="salvarEdicao()">Salvar</button>
+      <button class="cancel" onclick="window.location.href='get.html'">Cancelar</button>
+    </div>
+    <a href="admin.html">
+      <button >Voltar para Página de Admin</button>
+      </a>
+  </div>
+
+  <script src="put.js"></script>
+</body>
+</html>

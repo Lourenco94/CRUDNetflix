@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GET - Cadastrados</title>
+  <link rel="stylesheet" href="get.css">
+</head>
+<body>
+  <center>
+    <h1>Cadastrados</h1>
+
+    <!-- busca por CPF -->
+    <div class="filters">
+      <input type="text" id="filtroCPF" placeholder="Buscar por CPF">
+      <input type="button" onclick="buscarPorCPF()" value="Buscar">
+      <input type="button" onclick="carregarTodos()" value="Mostrar todos">
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <td>Id:</td>
+            <td>Nome:</td>
+            <td>Sobrenome:</td>
+            <td>CPF:</td>
+            <td>Email:</td>
+            <td>Telefone:</td>
+            <td>Ações:</td>
+          </tr>
+        </thead>
+        <tbody id="tabela-corpo"></tbody>
+      </table>
+    </div>
+    <a href="admin.html">
+    <button >Voltar para Página de Admin</button>
+    </a>
+  </center>
+
+  <script src="get.js"></script>
+</body>
+</html>
